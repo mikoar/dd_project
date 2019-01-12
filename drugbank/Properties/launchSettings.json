@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "drugbank": {
+      "commandName": "Project",
+      "commandLineArgs": "E:\\drugbank\\drugbank_full_database.xml",
+      "workingDirectory": "E:\\drugbank"
+    }
+  }
+}
