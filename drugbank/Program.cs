@@ -26,6 +26,7 @@ namespace drugbank
 			questions.Question8(drugbank);
 			questions.Question9(drugbank);
 			questions.Question11(drugbank);
+			questions.Question12(drugbank);
 		}
 	}
 }
