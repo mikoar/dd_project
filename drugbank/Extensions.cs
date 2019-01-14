@@ -12,13 +12,13 @@ namespace drugbank
 			var delimiter = '\t';
 			var filePath = Path.Combine(path, fileName);
 			Console.WriteLine($"Writing { filePath }.");
-			using (var file = File.CreateText(Path.Combine(Directory.GetCurrentDirectory(), filePath)))
+			using(var file = File.CreateText(Path.Combine(Directory.GetCurrentDirectory(), filePath)))
 			{
 				file.WriteLine(string.Join(delimiter, collection.FirstOrDefault()?.Header));
 
 				foreach (var row in collection)
 				{
-					file.WriteLine(string.Join(delimiter, row.Row));
+					file.WriteLine(string.Join(delimiter, row.Row.Select(field => $"\"{ field }\"")));
 				}
 			}
 		}
